@@ -4,21 +4,21 @@ grid-size: grid-lg
 header-fixed: true
 header-animated: true
 header-dark: true
-header-transparent: false
+header-transparent: true
 sticky-footer: true
 blog-page: /blog
 spectre:
   exp: false
   icons: true
-custom_logo:
-  user/themes/quark/images/logo/logo2.png:
-    name: logo2.png
-    type: image/png
-    size: 32595
-    path: user/themes/quark/images/logo/logo2.png
 custom_logo_mobile:
   user/themes/quark/images/logo/logo2.png:
     name: logo2.png
     type: image/png
     size: 32595
     path: user/themes/quark/images/logo/logo2.png
+custom_logo:
+  user/themes/quark/images/logo/Logo-Dany-Ocean_ws-1.png:
+    name: Logo-Dany-Ocean_ws-1.png
+    type: image/png
+    size: 3108
+    path: user/themes/quark/images/logo/Logo-Dany-Ocean_ws-1.png
