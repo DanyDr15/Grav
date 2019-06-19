@@ -1,5 +1,6 @@
 ---
 title: escudo
+media_order: fondo2.jpg
 content:
     items:
         - '@self.children'
