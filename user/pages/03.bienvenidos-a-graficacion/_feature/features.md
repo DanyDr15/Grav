@@ -3,10 +3,9 @@ title: Feature
 class: small
 features:
     -
-        icon: 'fa fa-heart'
+        icon: 'fa fa-chevron-circle-right'
         header: Bandera
         text: 'Ejercicio de la bandera de Jamaica'
-        url: 'https://www.google.com/'
+        url: /bienvenidos-a-graficacion/bandera
 ---
 
-Esto es mi contenido
