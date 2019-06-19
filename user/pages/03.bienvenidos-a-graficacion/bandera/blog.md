@@ -1,6 +1,5 @@
 ---
 title: bandera
-visible: true
 content:
     items:
         - '@self.children'
