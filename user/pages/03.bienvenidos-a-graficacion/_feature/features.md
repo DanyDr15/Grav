@@ -4,6 +4,11 @@ child_type: item
 class: small
 features:
     -
+        icon: 'fa fa-pencil'
+        header: 'Analisis Frameworks'
+        text: 'Frameworks de juegos'
+        url: /analisis
+    -
         icon: 'fa fa-gamepad'
         header: Juego
         text: 'Juego realizado en canvan'
