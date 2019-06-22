@@ -6,4 +6,3 @@ content:
 body_classes: modular
 ---
 
-hola mundo
