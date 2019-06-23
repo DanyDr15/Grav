@@ -1,5 +1,6 @@
 ---
 title: Feature
+menu: Blogs
 child_type: item
 class: small
 features:
@@ -28,6 +29,11 @@ features:
         header: 'Escudo Ecuador'
         text: 'Realizado con svg'
         url: /bienvenidos-a-graficacion/escudo
+    -
+        icon: 'fa fa-folder'
+        header: 'Carpetas Grav'
+        text: 'Se habla de cada una de las carpetas '
+        url: /carpetas
 ---
 
 #BLOGS
