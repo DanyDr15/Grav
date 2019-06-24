@@ -34,6 +34,26 @@ features:
         header: 'Carpetas Grav'
         text: 'Se habla de cada una de las carpetas '
         url: /carpetas
+    -
+        icon: 'fa fa-pencil-square-o'
+        header: 'Quiz html,css,js'
+        text: 'Test de cada uno'
+        url: /quiz
+    -
+        icon: 'fa fa-html5'
+        header: JavaScrips
+        text: 'Se ingresa el numero para realizar el grafico'
+        url: /juegojs
+    -
+        icon: 'fa fa-columns'
+        header: 'Ejercicio Ascensor'
+        text: 'Codigo de niveles elevator saga'
+        url: /ascensor
+    -
+        icon: 'fa fa-codiepie'
+        header: 'Ejercicios Css'
+        text: 'Ejercicios resueltos'
+        url: /css
 ---
 
 #BLOGS
