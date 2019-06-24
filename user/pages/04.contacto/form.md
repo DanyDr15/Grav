@@ -26,11 +26,6 @@ form:
           validate:
             required: true
 
-        g-recaptcha-response:
-          label: Captcha
-          type: captcha
-          recaptcha_not_validated: 'Captcha not valid!'
-
     buttons:
         submit:
           type: submit
@@ -40,7 +35,6 @@ form:
           value: Reset
 
     process:
-        captcha: true
         save:
             fileprefix: contact-
             dateformat: Ymd-His-u
