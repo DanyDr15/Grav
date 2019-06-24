@@ -13,7 +13,7 @@ features:
         icon: 'fa fa-gamepad'
         header: Juego
         text: 'Juego realizado en canvan'
-        url: /bienvenidos-a-graficacion/juego
+        url: /jogo
     -
         icon: 'fa fa-chevron-circle-right'
         header: Bandera
