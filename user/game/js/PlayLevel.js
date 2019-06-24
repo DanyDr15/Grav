@@ -24,6 +24,7 @@ TreasureHunter.PlayLevel.prototype = {
         /////////////////////////////////
         // START VARIABLES DECLARATION //
         /////////////////////////////////
+        this.inmortalidad = false;
 
         this.gameStarted = false;
         this.timerEvents = [];
@@ -33,7 +34,7 @@ TreasureHunter.PlayLevel.prototype = {
 
         this.playerDirection = 1;
         this.playerJumpSpeed = -550;
-        this.playerVelocity = 175;
+        this.playerVelocity = 175; //Modificar Velocidad
         this.isPlayerAlive = true;
 
         this.canJumpSpaceBar = false;
@@ -112,7 +113,7 @@ TreasureHunter.PlayLevel.prototype = {
         }, function(player, fallPlatform) {return fallPlatform.collidable;}, this);
 
         this.physics.arcade.overlap(this.player, this.spikes, function() {
-            this.gameOver();
+            if(this.inmortalidad == false){this.gameOver();}
         }, null, this);
 
         this.physics.arcade.overlap(this.player, this.coins, function(player, coin) {
@@ -131,7 +132,7 @@ TreasureHunter.PlayLevel.prototype = {
         if (this.gameStarted && this.isPlayerAlive) {
             this.movePlayer();
         } else {
-            if (this.input.keyboard.isDown(Phaser.Keyboard.ENTER)) {
+            if (this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
                 this.gameStarted = true;
                 this.timerEvents.push(
                     this.time.events.add(150, function() {
@@ -141,6 +142,22 @@ TreasureHunter.PlayLevel.prototype = {
             }
         }
 
+        if (this.input.keyboard.isDown(Phaser.Keyboard.A)) {//Al precionar tecla A de aumentar la velocidad del juego
+            this.playerVelocity += 5;
+        }else{
+            if (this.input.keyboard.isDown(Phaser.Keyboard.D)) {//Al precionar tecla D de dismunuir la velocidad del juego
+                this.playerVelocity -= 5;
+            }
+        }
+
+        if (this.input.keyboard.isDown(Phaser.Keyboard.I)) {// Al precionar tecla I se vuelve inmortal
+
+            if (this.inmortalidad == false) {// si volvemos a precionar la tecla I desaparece la inmortalidad
+                this.inmortalidad = true;
+            }else{
+                this.inmortalidad = false;
+            }
+        }
         /////////////////////////////////
         //  SHAKE SCREEN               //
         /////////////////////////////////
@@ -193,7 +210,6 @@ TreasureHunter.PlayLevel.prototype = {
         this.state.start('LevelSelection');
     },
 
-    //LUGAR DE INMORTALIDAD
     gameOver: function() {
         this.coinSound.stop();
         this.jumpSound.stop();
@@ -203,12 +219,12 @@ TreasureHunter.PlayLevel.prototype = {
 
         this.timerEvents.push(
             this.time.events.add(1, function() {
-                this.player.body.enable = true;
-                this.isPlayerAlive = true;
+                this.player.body.enable = false;
+                this.isPlayerAlive = false;
 
                 var hitAnimation = this.player.animations.play('hit');
                 hitAnimation.onComplete.add(function(){
-                    //this.player.kill();
+                    this.player.kill();
                     this.timerEvents.push(
                         this.time.events.add(Phaser.Timer.SECOND * 0.1, this.restartLevel, this)
                     );
@@ -254,7 +270,7 @@ TreasureHunter.PlayLevel.prototype = {
 
         this.player.animations.play('idle');
     },
-    //velocidad del muñeco
+
     movePlayer: function () {
 
         this.player.body.velocity.x = this.playerDirection * this.playerVelocity;
