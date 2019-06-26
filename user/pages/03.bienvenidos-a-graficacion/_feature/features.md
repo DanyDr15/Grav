@@ -5,6 +5,16 @@ child_type: item
 class: small
 features:
     -
+        icon: 'fa fa-lightbulb-o'
+        header: MEMORIA
+        text: 'Juego del examen'
+        url: /examen
+    -
+        icon: 'fa fa-rocket'
+        header: Phaser
+        text: 'Juego hecho con phaser'
+        url: /user/game/t_hunter.html
+    -
         icon: 'fa fa-pencil'
         header: 'Analisis Frameworks'
         text: 'Frameworks de juegos'
