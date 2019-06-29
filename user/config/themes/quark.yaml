@@ -9,7 +9,7 @@ sticky-footer: true
 blog-page: /blog
 spectre:
   exp: false
-  icons: true
+  icons: false
 custom_logo_mobile:
   user/themes/quark/images/logo/logo2.png:
     name: logo2.png
