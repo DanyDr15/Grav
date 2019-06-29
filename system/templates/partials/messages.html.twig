@@ -7,7 +7,7 @@
             {% set scope = message.scope|e %}
             {% set color = status_mapping[scope] %}
 
-           <!-- <div class="notices {{ scope }} {{ color }}"><p>{{ message.message|raw }}</p></div> -->
+           <div class="notices {{ scope }} {{ color }}"><p>{{ message.message|raw }}</p></div>
 
         {% endfor %}
     </div>
